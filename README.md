@@ -10,3 +10,5 @@ A repository to create from different programming passwords generators
 - [ ] C#
 - [ ] PHP.
 - [ ] Ruby.
+- [ ] Rust.
+- [ ] Go.
