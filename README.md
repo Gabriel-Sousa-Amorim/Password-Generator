@@ -7,7 +7,8 @@ A repository to create from different programming passwords generators
 - [X] Python.
 - [ ] C.
 - [ ] C++.
-- [ ] C#
+- [ ] C#.
+- [ ] Java.
 - [ ] PHP.
 - [ ] Ruby.
 - [ ] Rust.
