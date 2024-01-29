@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1> 
+    <hr>
+    <main>
+            <label>Size of the Password.</label><br><br>
+            <input type="number" required="true" max="999" name="length"><br><br>
+            <input type="button" value="Submit">
+    </main>
+    <h3 id="result"></h3>
+    <script>
+        const chars = {
+    "letters": "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÇç",
+    "numbers": "0123456789",
+    "symbols": "!@#$%&*()-_+=^{}[];:?",
+};
+let seed;
+let password = "";
+function randomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+function Generate(length) {
+    for (let i = 0; i < length; i++) {
+        seed = randomInteger(1, 3);
+        switch (seed) {
+            case 1:
+                seed = randomInteger(0, chars.letters.length - 1);
+                password += chars.letters[seed];
+                break;
+            case 2:
+                seed = randomInteger(0, chars.numbers.length - 1);
+                password += chars.numbers[seed];
+                break;
+            case 3:
+                seed = randomInteger(0, chars.symbols.length - 1);
+                password += chars.symbols[seed];
+                break;
+        };
+    };
+    document.querySelector("h3#result").innerHTML = `Your password is <span style="color:#F00">${password}</span> .`;
+    return password = "";
+    return false;
+};
 
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+        let length = document.querySelector("input[name=length]")
+        if (length.value != "" && length.value < 1000 && length.value > 0) {
+            Generate(parseInt(length.value))
+        }
+        else {
+            document.querySelector("h3#result").innerHTML = "Error"
+        }
+    })
+
+    </script>
+</body>
+</html>
