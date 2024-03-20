@@ -6,7 +6,7 @@ chars = {
 };
 seed = 0
 
-def Gerador(length):
+def Generate(length):
     password = ""
     for i in range(length):
         seed = random.randint(1,3)
@@ -23,4 +23,4 @@ def Gerador(length):
     print("Your password is", password)
     password = ""
 
-Gerador(15)
+Generate(15)
