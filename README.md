@@ -3,7 +3,7 @@ A repository to write from different programming languages, passwords generators
 
 # Languages
 - [ ] C.
-- [ ] C++.
+- [X] C++.
 - [ ] C#.
 - [ ] Go.
 - [ ] Java.
