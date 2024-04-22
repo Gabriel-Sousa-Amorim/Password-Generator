@@ -3,11 +3,9 @@
 #include <time.h>
 #include <unordered_map>
 
-using namespace std;
-
 int main() {
     srand((unsigned) time(NULL));
-    string letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÇç", numbers = "0123456789",  symbols = "!@#$%&*()-_+=^{}[];:?", password = "";
+    std::string letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÇç", numbers = "0123456789",  symbols = "!@#$%&*()-_+=^{}[];:?", password = "";
     int i = 0, size = 15;
     while (i < size) {
         i++;
@@ -23,5 +21,5 @@ int main() {
             break;
         };
     };
-    cout << password << endl;
+    std::cout << password << "\n";
 };
